@@ -32,6 +32,6 @@ jobs:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
         run: |
           firebase appdistribution:distribute build/app/outputs/flutter-apk/app-release.apk \
-            --app "1:90865248703:android:699335c98c95521943d90a" \
+            --app "1:874603911408:android:a8cf9bf98a92e282f40a35" \
             --groups "qa-testers" \
             --release-notes "Automated build from GitHub Actions"

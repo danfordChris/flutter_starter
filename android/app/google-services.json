@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "874603911408",
+    "project_id": "cicd-test-f947d",
+    "storage_bucket": "cicd-test-f947d.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:874603911408:android:a8cf9bf98a92e282f40a35",
+        "android_client_info": {
+          "package_name": "com.example.changisha"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAFwRzpqKJ7Y_dmPWJ0qeMnrAy6Aq2lHVs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
