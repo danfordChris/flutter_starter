@@ -40,8 +40,10 @@ dependencies:
 
   ipf_flutter_starter_pack:
     git:
-      url: https://github.com/iPFSoftwares/iPF_Flutter_Starter_Pack.git
+      url: https://github.com/danfordChris/ipf_starter_pack
       ref: develop
+
+
   flutter_quill: ^11.4.1
   hugeicons: ^0.0.10
   hero_animation: ^1.1.4

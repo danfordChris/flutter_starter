@@ -1,4 +1,5 @@
 import 'package:changisha/services/preferences.dart';
+import 'package:changisha/services/session_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:ipf_flutter_starter_pack/bases.dart';
 
@@ -40,6 +41,7 @@ class SettingProvider extends ChangeNotifier {
     _themeMode = (isDarkMode == null || !isDarkMode)
         ? ThemeMode.light
         : ThemeMode.dark;
+    await SessionManager.instance.changeTheme();
     notifyListeners();
   }
 
@@ -48,6 +50,7 @@ class SettingProvider extends ChangeNotifier {
         ? ThemeMode.dark
         : ThemeMode.light;
     Preferences.instance.save(PrefKeys.darkMode, _themeMode == ThemeMode.dark);
+    await SessionManager.instance.changeTheme();
     notifyListeners();
   }
 

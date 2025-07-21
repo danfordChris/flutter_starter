@@ -1,5 +1,9 @@
+import 'package:changisha/constants/app_colors.dart';
 import 'package:changisha/constants/app_pictures.dart';
+import 'package:changisha/constants/app_text_style.dart';
+import 'package:changisha/services/session_manager.dart';
 import 'package:flutter/material.dart';
+import 'package:hugeicons/hugeicons.dart';
 
 class AccountScreen extends StatelessWidget {
   const AccountScreen({Key? key}) : super(key: key);
@@ -20,6 +24,7 @@ class AccountScreen extends StatelessWidget {
                       radius: 40,
                       backgroundImage: AssetImage(AppPictures.avator),
                     ),
+                    transitionOnUserGestures: true,
                   ),
                   TextButton(
                     onPressed: () {
@@ -94,12 +99,26 @@ class AccountScreen extends StatelessWidget {
     required String subtitle,
     required VoidCallback onTap,
   }) {
+    final _isDarkMode = SessionManager.instance.isDarkMode;
     return ListTile(
       contentPadding: const EdgeInsets.symmetric(horizontal: 0.0),
       leading: Icon(icon, color: Theme.of(context).primaryColor),
-      title: Text(title),
-      subtitle: Text(subtitle),
-      trailing: const Icon(Icons.chevron_right),
+      title: Text(
+        title,
+        style: AppTextStyle.subtext4(
+          _isDarkMode ? AppColors.black : AppColors.blackText,
+        ),
+      ),
+      subtitle: Text(
+        subtitle,
+        style: AppTextStyle.subtext1(
+          _isDarkMode ? AppColors.white : AppColors.blackText,
+        ),
+      ),
+      // trailing: HugeIcon(
+      //   icon: HugeIcons.strokeRoundedArrowRight01,
+      //   color: _isDarkMode ? AppColors.white : AppColors.blackText,
+      // ),
       onTap: onTap,
     );
   }

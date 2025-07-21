@@ -4,6 +4,7 @@ import 'package:changisha/constants/app_pictures.dart';
 import 'package:changisha/provider/settings_provider.dart';
 import 'package:changisha/screens/settings/app_settings_screen.dart';
 import 'package:changisha/services/localization_service.dart';
+import 'package:changisha/services/session_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:hugeicons/hugeicons.dart';
 
@@ -100,6 +101,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   ),
                   onPressed: () async {
                     await _settingProvider.changeThemeMode();
+                    await SessionManager.instance.changeTheme();
                     setState(() {
                       _isDarkMode =
                           _settingProvider.themeMode == ThemeMode.dark;

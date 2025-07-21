@@ -24,16 +24,24 @@ class MessageLookup extends MessageLookupByLibrary {
 
   final messages = _notInlinedMessages(_notInlinedMessages);
   static Map<String, Function> _notInlinedMessages(_) => <String, Function>{
+    "error": MessageLookupByLibrary.simpleMessage(
+      "Error! Something Went Wrong",
+    ),
+    "female": MessageLookupByLibrary.simpleMessage("Female"),
     "hiMessage": m0,
     "homeScreen": MessageLookupByLibrary.simpleMessage("Home Screen"),
     "homeScreenTittle": MessageLookupByLibrary.simpleMessage(
       "Changisha Dashboard",
     ),
+    "male": MessageLookupByLibrary.simpleMessage("Male"),
+    "married": MessageLookupByLibrary.simpleMessage("Married"),
     "notificationsScreen": MessageLookupByLibrary.simpleMessage(
       "Notifications Screen",
     ),
     "profileScreen": MessageLookupByLibrary.simpleMessage("Profile Screen"),
     "settingsScreen": MessageLookupByLibrary.simpleMessage("Settings Screen"),
+    "single": MessageLookupByLibrary.simpleMessage("Single"),
+    "unknown": MessageLookupByLibrary.simpleMessage("Unknown"),
     "welcomeMessage": MessageLookupByLibrary.simpleMessage("welcome back!"),
   };
 }

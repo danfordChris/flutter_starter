@@ -118,6 +118,41 @@ class S {
       args: [],
     );
   }
+
+  /// `Error! Something Went Wrong`
+  String get error {
+    return Intl.message(
+      'Error! Something Went Wrong',
+      name: 'error',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `Male`
+  String get male {
+    return Intl.message('Male', name: 'male', desc: '', args: []);
+  }
+
+  /// `Female`
+  String get female {
+    return Intl.message('Female', name: 'female', desc: '', args: []);
+  }
+
+  /// `Unknown`
+  String get unknown {
+    return Intl.message('Unknown', name: 'unknown', desc: '', args: []);
+  }
+
+  /// `Single`
+  String get single {
+    return Intl.message('Single', name: 'single', desc: '', args: []);
+  }
+
+  /// `Married`
+  String get married {
+    return Intl.message('Married', name: 'married', desc: '', args: []);
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

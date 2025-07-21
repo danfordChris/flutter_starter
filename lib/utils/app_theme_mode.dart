@@ -38,8 +38,8 @@ class AppThemeMode {
 
       cardTheme: CardThemeData(
         surfaceTintColor: darkMode ? AppColors.lightGrey : AppColors.cardGreen,
-        color: darkMode ? AppColors.blackText2 : AppColors.white,
-        shadowColor: darkMode ? AppColors.grey5 : AppColors.grey4,
+        color: darkMode ? AppColors.grey5 : AppColors.white,
+        shadowColor: darkMode ? AppColors.black : AppColors.grey4,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(12)),
       ),
       textTheme: TextTheme(

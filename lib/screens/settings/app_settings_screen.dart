@@ -1,10 +1,14 @@
+import 'package:changisha/constants/app_colors.dart';
 import 'package:changisha/constants/app_pictures.dart';
+import 'package:changisha/constants/app_text_style.dart';
 import 'package:changisha/screens/settings/notification_screen.dart';
+import 'package:changisha/services/session_manager.dart';
 import 'package:flutter/material.dart';
 import 'package:hero_animation/hero_animation.dart';
 import 'package:changisha/screens/settings/account_screen.dart';
 import 'package:changisha/screens/settings/privacy_screen.dart';
 import 'package:changisha/screens/settings/about_screen.dart';
+import 'package:hugeicons/hugeicons.dart';
 
 class AppSettingsScreen extends StatelessWidget {
   const AppSettingsScreen({Key? key}) : super(key: key);
@@ -22,6 +26,7 @@ class AppSettingsScreen extends StatelessWidget {
                 radius: 50,
                 backgroundImage: AssetImage(AppPictures.avator),
               ),
+              transitionOnUserGestures: true,
             ),
           ),
           const SizedBox(height: 24),
@@ -85,14 +90,31 @@ class AppSettingsScreen extends StatelessWidget {
     required String subtitle,
     required VoidCallback onTap,
   }) {
+    final _isDarkMode = SessionManager.instance.isDarkMode;
     return Card(
       margin: const EdgeInsets.symmetric(vertical: 8),
       elevation: 2,
       child: ListTile(
-        leading: Icon(icon, color: Theme.of(context).primaryColor),
-        title: Text(title),
-        subtitle: Text(subtitle),
-        trailing: const Icon(Icons.chevron_right),
+        leading: Icon(
+          icon,
+          color: _isDarkMode ? AppColors.grey : AppColors.blackText,
+        ),
+        title: Text(
+          title,
+          style: AppTextStyle.subtext4(
+            _isDarkMode ? AppColors.black : AppColors.blackText,
+          ),
+        ),
+        subtitle: Text(
+          subtitle,
+          style: AppTextStyle.subtext1(
+            _isDarkMode ? AppColors.white : AppColors.blackText,
+          ),
+        ),
+        trailing: HugeIcon(
+          icon: HugeIcons.strokeRoundedArrowRight01,
+          color: _isDarkMode ? AppColors.white : AppColors.blackText,
+        ),
         onTap: onTap,
       ),
     );

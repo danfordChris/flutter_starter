@@ -2,6 +2,7 @@ import 'package:changisha/provider/settings_provider.dart';
 import 'package:changisha/screens/dashboard_screen.dart';
 import 'package:changisha/services/database_manager.dart';
 import 'package:changisha/services/localization_service.dart';
+import 'package:changisha/services/session_manager.dart';
 import 'package:changisha/utils/app_theme_mode.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -9,6 +10,7 @@ import 'package:provider/provider.dart';
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
   DatabaseManager.instance.init();
+  SessionManager.instance.setup();
   runApp(const AppInit());
 }
 
