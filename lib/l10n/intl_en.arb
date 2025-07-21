@@ -1,0 +1,11 @@
+{
+    "homeScreen":"Home Screen",
+    "settingsScreen":"Settings Screen",
+    "profileScreen":"Profile Screen",
+    "notificationsScreen":"Notifications Screen",
+
+    "homeScreenTittle":"Changisha Dashboard",
+    "hiMessage":"Hi, {userName}! 👋",
+    "welcomeMessage":"welcome back!"
+    
+}
