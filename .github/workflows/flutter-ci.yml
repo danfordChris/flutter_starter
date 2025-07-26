@@ -14,6 +14,8 @@ jobs:
         uses: subosito/flutter-action@v2
         with:
           flutter-version: '3.32.5' # or your app version
+      - name: Configure Git for Private Repos
+        run: git config --global url."https://${{ secrets.CICD_TOKEN }}@github.com/".insteadOf "https://github.com/"
       - name: Install Dependencies
         run: flutter pub get
       # - name: Run Tests
