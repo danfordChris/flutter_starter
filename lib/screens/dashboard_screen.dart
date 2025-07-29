@@ -2,6 +2,7 @@ import 'package:changisha/constants/app_colors.dart';
 import 'package:changisha/constants/app_text_style.dart';
 import 'package:changisha/constants/app_pictures.dart';
 import 'package:changisha/provider/settings_provider.dart';
+import 'package:changisha/screens/home_screen/home_screen.dart';
 import 'package:changisha/screens/settings/app_settings_screen.dart';
 import 'package:changisha/services/localization_service.dart';
 import 'package:changisha/services/session_manager.dart';
@@ -21,7 +22,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
   late SettingProvider _settingProvider;
 
   final List<Widget> _screens = [
-    Center(child: Text('Home Screen')),
+    HomeScreen(),
     Center(child: Text('Notifications')),
     AppSettingsScreen(),
   ];
@@ -48,6 +49,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        surfaceTintColor: AppColors.white,
         title: _currentIndex == 0
             ? Row(
                 mainAxisSize: MainAxisSize.min,
